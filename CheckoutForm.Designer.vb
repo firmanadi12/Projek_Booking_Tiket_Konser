@@ -26,9 +26,7 @@ Partial Class CheckoutForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TotalPriceTBX = New ns1.BunifuMetroTextbox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.CatCBX = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.PriceTBX = New ns1.BunifuMetroTextbox()
         Me.BunifuFlatButton1 = New ns1.BunifuFlatButton()
         Me.EventTBX = New ns1.BunifuMetroTextbox()
@@ -82,20 +80,11 @@ Partial Class CheckoutForm
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label10.Location = New System.Drawing.Point(51, 385)
+        Me.Label10.Location = New System.Drawing.Point(52, 292)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(48, 16)
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "PRICE"
-        '
-        'CatCBX
-        '
-        Me.CatCBX.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CatCBX.FormattingEnabled = True
-        Me.CatCBX.Location = New System.Drawing.Point(51, 312)
-        Me.CatCBX.Name = "CatCBX"
-        Me.CatCBX.Size = New System.Drawing.Size(254, 39)
-        Me.CatCBX.TabIndex = 30
         '
         'Label9
         '
@@ -108,17 +97,6 @@ Partial Class CheckoutForm
         Me.Label9.TabIndex = 29
         Me.Label9.Text = "QTY"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label7.Location = New System.Drawing.Point(50, 293)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(83, 16)
-        Me.Label7.TabIndex = 28
-        Me.Label7.Text = "CATEGORY"
-        '
         'PriceTBX
         '
         Me.PriceTBX.BorderColorFocused = System.Drawing.Color.Lavender
@@ -129,7 +107,7 @@ Partial Class CheckoutForm
         Me.PriceTBX.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.PriceTBX.ForeColor = System.Drawing.Color.White
         Me.PriceTBX.isPassword = False
-        Me.PriceTBX.Location = New System.Drawing.Point(51, 401)
+        Me.PriceTBX.Location = New System.Drawing.Point(51, 312)
         Me.PriceTBX.Margin = New System.Windows.Forms.Padding(4)
         Me.PriceTBX.Name = "PriceTBX"
         Me.PriceTBX.Size = New System.Drawing.Size(257, 44)
@@ -157,7 +135,7 @@ Partial Class CheckoutForm
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(436, 475)
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(369, 398)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
@@ -222,7 +200,7 @@ Partial Class CheckoutForm
         Me.idTranTBX.Location = New System.Drawing.Point(51, 218)
         Me.idTranTBX.Margin = New System.Windows.Forms.Padding(4)
         Me.idTranTBX.Name = "idTranTBX"
-        Me.idTranTBX.Size = New System.Drawing.Size(254, 44)
+        Me.idTranTBX.Size = New System.Drawing.Size(257, 44)
         Me.idTranTBX.TabIndex = 38
         Me.idTranTBX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
@@ -233,9 +211,9 @@ Partial Class CheckoutForm
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label5.Location = New System.Drawing.Point(22, 22)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(111, 25)
+        Me.Label5.Size = New System.Drawing.Size(137, 25)
         Me.Label5.TabIndex = 40
-        Me.Label5.Text = "Checkout"
+        Me.Label5.Text = "CHECKOUT"
         '
         'BunifuFlatButton2
         '
@@ -243,7 +221,7 @@ Partial Class CheckoutForm
         Me.BunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton2.BorderRadius = 0
-        Me.BunifuFlatButton2.ButtonText = "<< BACK"
+        Me.BunifuFlatButton2.ButtonText = "<<  BACK"
         Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
@@ -258,7 +236,7 @@ Partial Class CheckoutForm
         Me.BunifuFlatButton2.IconVisible = True
         Me.BunifuFlatButton2.IconZoom = 90.0R
         Me.BunifuFlatButton2.IsTab = False
-        Me.BunifuFlatButton2.Location = New System.Drawing.Point(53, 475)
+        Me.BunifuFlatButton2.Location = New System.Drawing.Point(51, 398)
         Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
         Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
@@ -266,7 +244,7 @@ Partial Class CheckoutForm
         Me.BunifuFlatButton2.selected = False
         Me.BunifuFlatButton2.Size = New System.Drawing.Size(118, 61)
         Me.BunifuFlatButton2.TabIndex = 41
-        Me.BunifuFlatButton2.Text = "<< BACK"
+        Me.BunifuFlatButton2.Text = "<<  BACK"
         Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -288,9 +266,7 @@ Partial Class CheckoutForm
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TotalPriceTBX)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.CatCBX)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.PriceTBX)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CheckoutForm"
@@ -305,9 +281,7 @@ Partial Class CheckoutForm
     Friend WithEvents Label6 As Label
     Friend WithEvents TotalPriceTBX As ns1.BunifuMetroTextbox
     Friend WithEvents Label10 As Label
-    Friend WithEvents CatCBX As ComboBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents PriceTBX As ns1.BunifuMetroTextbox
     Friend WithEvents BunifuFlatButton1 As ns1.BunifuFlatButton
     Friend WithEvents EventTBX As ns1.BunifuMetroTextbox

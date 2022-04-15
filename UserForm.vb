@@ -3,6 +3,8 @@ Public Class UserForm
     Private Sub UserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Koneksi()
         Updatedata()
+        clear()
+
 
 
         idUserTBX.Enabled = False
@@ -35,12 +37,12 @@ Public Class UserForm
         Conn.Close()
     End Sub
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
-        If idUserTBX.Text = "" Or UserNameTBX.Text = "" Or EmailTBX.Text = "" Or PasswordTBX.Text = "" Or RoleCBX.SelectedIndex = -1 Then
+        If UserNameTBX.Text = "" Or EmailTBX.Text = "" Or PasswordTBX.Text = "" Or RoleCBX.SelectedIndex = -1 Then
             MsgBox("Data Yang Anda Input Belum Lengkap")
         Else
             Conn.Open()
             Dim inputdata As String
-            inputdata = "insert into tb_user values('" & idUserTBX.Text & "','" & UserNameTBX.Text & "','" & EmailTBX.Text & "','" & PasswordTBX.Text & "','" & RoleCBX.SelectedItem.ToString() & "')"
+            inputdata = "insert into tb_user values('""','" & UserNameTBX.Text & "','" & EmailTBX.Text & "','" & PasswordTBX.Text & "','" & RoleCBX.SelectedItem.ToString() & "')"
             cmd = New MySqlCommand(inputdata, Conn)
             cmd.ExecuteNonQuery()
             MsgBox("User Berhasil Ditambahkan")
@@ -56,7 +58,7 @@ Public Class UserForm
         Else
             Conn.Open()
             Dim Editdata As String
-            Editdata = "update tb_user set id_user = '" & idUserTBX.Text & "',username = '" & idUserTBX.Text & "',email_user = '" & EmailTBX.Text & "',passwd = '" & PasswordTBX.Text & "',role = '" & RoleCBX.SelectedItem.ToString() & "'  where id_user='" & idUserTBX.Text & "' "
+            Editdata = "update tb_user set id_user = '" & idUserTBX.Text & "',username = '" & UserNameTBX.Text & "',email_user = '" & EmailTBX.Text & "',passwd = '" & PasswordTBX.Text & "',role = '" & RoleCBX.SelectedItem.ToString() & "'  where id_user='" & idUserTBX.Text & "' "
             cmd = New MySqlCommand(Editdata, Conn)
             cmd.ExecuteNonQuery()
             MsgBox("Update Data User Berhasil")

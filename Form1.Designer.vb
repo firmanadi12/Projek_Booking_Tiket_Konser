@@ -95,7 +95,7 @@ Partial Class Form1
         'ToolStripStatusLabel2
         '
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(526, 17)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(557, 17)
         Me.ToolStripStatusLabel2.Spring = True
         '
         'lbDate
@@ -112,7 +112,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Program Booking Tiket Konser"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

@@ -17,7 +17,8 @@
         EventForm.Show()
         TiketForm.Close()
         UserForm.Close()
-
+        Dashboard.Close()
+        ReportForm.Close()
 
     End Sub
 
@@ -28,6 +29,9 @@
         TiketForm.Show()
         EventForm.Close()
         UserForm.Close()
+        Dashboard.Close()
+        ReportForm.Close()
+
 
 
     End Sub
@@ -40,5 +44,44 @@
         UserForm.Show()
         EventForm.Close()
         TiketForm.Close()
+        Dashboard.Close()
+        ReportForm.Close()
+
+    End Sub
+
+    Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dashboard.TopLevel = False
+        Panel1.Controls.Add(Dashboard)
+        Dashboard.BringToFront()
+        Dashboard.Show()
+    End Sub
+
+    Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
+        Dashboard.TopLevel = False
+        Panel1.Controls.Add(Dashboard)
+        Dashboard.BringToFront()
+        Dashboard.Show()
+        EventForm.Close()
+        TiketForm.Close()
+        UserForm.Close()
+        ReportForm.Close()
+
+
+    End Sub
+
+    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
+        ReportForm.TopLevel = False
+        Panel1.Controls.Add(ReportForm)
+        ReportForm.BringToFront()
+        ReportForm.Show()
+        EventForm.Close()
+        TiketForm.Close()
+        UserForm.Close()
+        Dashboard.Close()
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

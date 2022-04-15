@@ -4,10 +4,32 @@ Public Class BookingForm
 
     Private Sub booking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Koneksi()
+        'List_Category()
         List_event()
 
 
     End Sub
+
+    Sub List_Category()
+
+
+        Dim dt As DataTable
+        Dim sqlstr As String
+        Dim data As Integer
+
+        sqlstr = "select id_tiket,kategori from tb_tiket where id_event ='" & EventCBX.SelectedValue.ToString() & "'"
+        da = New MySqlDataAdapter(sqlstr, Conn)
+        dt = New DataTable
+        data = da.Fill(dt)
+
+        ComboBox1.DisplayMember = "kategori"
+        ComboBox1.ValueMember = "id_tiket"
+        ComboBox1.DataSource = dt
+
+        Conn.Close()
+    End Sub
+
+
 
     Sub List_event()
         Conn.Open()
@@ -24,6 +46,7 @@ Public Class BookingForm
         EventCBX.ValueMember = "id_event"
         EventCBX.DataSource = dt
         Conn.Close()
+
     End Sub
 
     Sub GetVenueDate()
@@ -36,24 +59,29 @@ Public Class BookingForm
         While reader.Read
             DateTBX.Text = "" + reader("tgl_event")
             VanueTBX.Text = "" + reader("tempat")
+            CheckoutForm.EventTBX.Text = "" + reader("nama_event")
 
         End While
         Conn.Close()
     End Sub
 
-    Public Sub clearbiodata()
+    Public Sub clear()
         idTBX.Text = ""
         NameTBX.Text = ""
         TlpTBX.Text = ""
         EmailTBX.Text = ""
+        EventCBX.SelectedIndex = -1
+        DateTBX.Text = ""
+        VanueTBX.Text = ""
     End Sub
 
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
         If idTBX.Text = "" Or NameTBX.Text = "" Or EmailTBX.Text = "" Or TlpTBX.Text = "" Then
             MsgBox("Data Yang Anda Inputkan Belum Lengkap")
         Else
+            CheckoutForm.GetPrice()
             CheckoutForm.TopLevel = False
-            Form1.Panel2.Controls.Add(CheckoutForm)
+            user.Panel1.Controls.Add(CheckoutForm)
             CheckoutForm.BringToFront()
             CheckoutForm.Show()
         End If
@@ -62,17 +90,12 @@ Public Class BookingForm
 
     Private Sub EventCBX_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles EventCBX.SelectionChangeCommitted
         GetVenueDate()
+        List_Category()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        CheckoutForm.Close()
-        Me.Close()
-        login.TopLevel = False
-        Form1.Panel2.Controls.Add(login)
-        login.BringToFront()
-        login.Show()
-        Form1.lbUsertype.Text = "-"
-        Form1.lbUsername.Text = "-"
-        Form1.Panel2.Dock = DockStyle.Right
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
     End Sub
+
+
 End Class

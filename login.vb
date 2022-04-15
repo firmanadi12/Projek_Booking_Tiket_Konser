@@ -20,11 +20,12 @@ Public Class login
         cmd.Parameters.AddWithValue("@d1", usernameTBX.Text)
         cmd.Parameters.AddWithValue("@d2", passwordTBX.Text)
         rdr = cmd.ExecuteReader()
+
         If (rdr.Read()) Then
             Form1.lbUsertype.Text = rdr.GetValue(0)
             Form1.lbUsername.Text = usernameTBX.Text
             Form1.lbDate.Text = Now
-            Conn.Close()
+
             If usernameTBX.Text = "admin" Then
                 Form1.Panel2.Dock = DockStyle.Fill
                 Admin.TopLevel = False
@@ -36,10 +37,10 @@ Public Class login
 
 
             Else
-                BookingForm.TopLevel = False
-                Form1.Panel2.Controls.Add(BookingForm)
-                BookingForm.BringToFront()
-                BookingForm.Show()
+                user.TopLevel = False
+                Form1.Panel2.Controls.Add(user)
+                user.BringToFront()
+                user.Show()
                 usernameTBX.Text = ""
                 passwordTBX.Text = ""
 
@@ -53,7 +54,7 @@ Public Class login
             passwordTBX.Text = ""
             usernameTBX.Focus()
 
-
+            Conn.Close()
         End If
 
 

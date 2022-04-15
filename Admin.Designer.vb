@@ -29,9 +29,9 @@ Partial Class Admin
         Me.DataEventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataTiketToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,20 +62,26 @@ Partial Class Admin
         'DataEventToolStripMenuItem
         '
         Me.DataEventToolStripMenuItem.Name = "DataEventToolStripMenuItem"
-        Me.DataEventToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DataEventToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.DataEventToolStripMenuItem.Text = "Event"
         '
         'DataTiketToolStripMenuItem
         '
         Me.DataTiketToolStripMenuItem.Name = "DataTiketToolStripMenuItem"
-        Me.DataTiketToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DataTiketToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.DataTiketToolStripMenuItem.Text = "Tiket"
         '
         'DataUserToolStripMenuItem
         '
         Me.DataUserToolStripMenuItem.Name = "DataUserToolStripMenuItem"
-        Me.DataUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DataUserToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.DataUserToolStripMenuItem.Text = "User"
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 42)
+        Me.ReportToolStripMenuItem.Text = "Report"
         '
         'PictureBox1
         '
@@ -90,16 +96,10 @@ Partial Class Admin
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(0, 49)
+        Me.Panel1.Location = New System.Drawing.Point(0, 44)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1386, 526)
+        Me.Panel1.Size = New System.Drawing.Size(1386, 1000)
         Me.Panel1.TabIndex = 3
-        '
-        'ReportToolStripMenuItem
-        '
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 42)
-        Me.ReportToolStripMenuItem.Text = "Report"
         '
         'Admin
         '

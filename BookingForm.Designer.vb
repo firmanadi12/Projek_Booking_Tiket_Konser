@@ -22,7 +22,6 @@ Partial Class BookingForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookingForm))
         Me.idTBX = New ns1.BunifuMetroTextbox()
         Me.NameTBX = New ns1.BunifuMetroTextbox()
         Me.EmailTBX = New ns1.BunifuMetroTextbox()
@@ -40,9 +39,8 @@ Partial Class BookingForm
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.EventCBX = New System.Windows.Forms.ComboBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'idTBX
@@ -167,9 +165,9 @@ Partial Class BookingForm
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label5.Location = New System.Drawing.Point(19, 21)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(168, 25)
+        Me.Label5.Size = New System.Drawing.Size(202, 25)
         Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Booking Ticket"
+        Me.Label5.Text = "BOOKING TICKET"
         '
         'Label8
         '
@@ -298,30 +296,29 @@ Partial Class BookingForm
         Me.EventCBX.Size = New System.Drawing.Size(362, 32)
         Me.EventCBX.TabIndex = 36
         '
-        'PictureBox1
+        'ComboBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(712, 9)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(42, 37)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 38
-        Me.PictureBox1.TabStop = False
+        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.ForeColor = System.Drawing.Color.White
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(360, 444)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ComboBox1.Size = New System.Drawing.Size(362, 32)
+        Me.ComboBox1.TabIndex = 37
         '
         'Label2
         '
-        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(638, 18)
+        Me.Label2.Location = New System.Drawing.Point(357, 424)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 24)
-        Me.Label2.TabIndex = 39
-        Me.Label2.Text = "Logout"
+        Me.Label2.Size = New System.Drawing.Size(83, 16)
+        Me.Label2.TabIndex = 38
+        Me.Label2.Text = "CATEGORY"
         '
         'BookingForm
         '
@@ -331,7 +328,7 @@ Partial Class BookingForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(866, 663)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.EventCBX)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
@@ -352,7 +349,6 @@ Partial Class BookingForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "BookingForm"
         Me.Text = "booking"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -374,6 +370,6 @@ Partial Class BookingForm
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents EventCBX As ComboBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label2 As Label
 End Class
